@@ -49,4 +49,28 @@ public class StringUtilityEndpoint {
         return ResponseEntity.ok(hasAnySpecialSymbol);
     }
 
+    @RequestMapping(method = RequestMethod.GET, path = "/digit/{text}")
+    public ResponseEntity<Boolean> isDigit(@PathVariable String text) {
+        Boolean isDigit = stringUtilityService.isDigit(text);
+        return ResponseEntity.ok(isDigit);
+    }
+
+    @RequestMapping(method = RequestMethod.GET, path = "/count/uppercase/{text}")
+    public ResponseEntity<Integer> getNumberOfUpperCaseLetters(@PathVariable String text) {
+        Integer numberOfUpperCaseLetters = stringUtilityService.getNumberOfUpperCaseLetters(text);
+        return ResponseEntity.ok(numberOfUpperCaseLetters);
+    }
+
+    @RequestMapping(method = RequestMethod.GET, path = "/count/lowercase/{text}")
+    public ResponseEntity<Integer> getNumberOfLowerCaseLetters(@PathVariable String text) {
+        Integer numberOfLowerCaseLetters = stringUtilityService.getNumberOfLowerCaseLetters(text);
+        return ResponseEntity.ok(numberOfLowerCaseLetters);
+    }
+
+    @RequestMapping(method = RequestMethod.GET, path = "/count/whitespaces/{text}")
+    public ResponseEntity<Integer> getNumberOfWhiteSpaces(@PathVariable String text) {
+        Integer numberOfWhiteSpaces = stringUtilityService.getNumberOfWhiteSpaces(text);
+        return ResponseEntity.ok(numberOfWhiteSpaces);
+    }
+
 }

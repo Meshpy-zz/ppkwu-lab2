@@ -18,6 +18,11 @@ API przyjmuje dowolny ciąg znaków i analizuje tekst pod kątem wybranej przez 
 | GET    | /api/contain/uppercase/     | {text}   | Zwraca informację, czy tekst posiada duży znak      |
 | GET    | /api/contain/lowercase/     | {text}   | Zwraca informację, czy tekst posiada mały znak      |
 | GET    | /api/contain/specialsymbol/ | {text}   | Zwraca informację, czy tekst posiada znak specjalny |
+| GET    | /api/digit/                 | {text}   | Zwraca informację, czy tekst jest liczbą            |
+| GET    | /api/count/uppercase        | {text}   | Zwraca liczbę wystąpień dużych liter                |
+| GET    | /api/count/lowercase        | {text}   | Zwraca liczbę wystąpień małych liter                |
+| GET    | /api/count/whitespaces      | {text}   | Zwraca liczbę wystąpień białych znaków              |
+
 
 # Przykładowe wywołanie usługi
 ```sh

@@ -21,8 +21,36 @@ public class StringUtilityService {
         return text.contains(" ");
     }
 
+    public boolean isDigit(String text) {
+        return text.matches("\\d+(\\.\\d+)?");
+    }
+
     public int getLengthOfText(String text) {
         return text.length();
+    }
+
+    public int getNumberOfUpperCaseLetters(String text) {
+        return (int) text.codePoints()
+                .filter(c -> c >= 'A' && c <= 'Z')
+                .count();
+    }
+
+    public int getNumberOfLowerCaseLetters(String text) {
+        return (int) text.codePoints()
+                .filter(c -> c >= 'a' && c <= 'z')
+                .count();
+    }
+
+    public int getNumberOfWhiteSpaces(String text) {
+        int spaceCounter = 0;
+
+        for (char c : text.toCharArray()) {
+            if (c == ' ') {
+                spaceCounter++;
+            }
+        }
+
+        return spaceCounter;
     }
 
 }
