@@ -14,7 +14,7 @@ public class StringUtilityService {
     }
 
     public boolean hasAnySpecialSymbols(String text) {
-        return text.chars().allMatch(Character::isLetter);
+        return !text.chars().allMatch(Character::isLetter);
     }
 
     public boolean hasAnyWhiteSpace(String text) {
